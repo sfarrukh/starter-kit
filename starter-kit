@@ -1,0 +1,47 @@
+#!/bin/bash
+# Starter folder for new project with javascript & express.js librabry
+
+# Current directory
+pwd
+
+# Make a folder with user input name
+mkdir $1
+echo '......project folder ./'$1 'created'
+
+# cd dir
+cd $1
+echo '......changed directory to ./'$1
+
+# make folders and files in a new directory
+mkdir static
+echo '......folder ./static created in project folder'
+
+cd ./static
+echo '......changed dir to ./static'
+
+touch index.html
+echo '......file index.html created'
+
+mkdir css js
+echo '......folders ./js & ./css created'
+
+cd ./js
+echo '......changed dir to ./js'
+
+touch main.js
+echo '.......main.js file created'
+
+cd ../css
+echo '........changed dir to ./css'
+
+touch style.css
+echo '........style.css file created'
+
+cd ../..
+echo '.......changed dir to project folder'
+
+npm init
+
+touch app.js
+
+npm i express --save
